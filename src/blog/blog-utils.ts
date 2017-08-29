@@ -1,13 +1,13 @@
 export class BlogUtils {
-
   static massageText(htmlString: any, isMobile: boolean): string {
-
-    if (!htmlString) return htmlString = '';
+    if (!htmlString) return (htmlString = '');
     const textElement = document.createElement('div');
     textElement.innerHTML = htmlString;
     const imgs = textElement.querySelectorAll('img');
     for (let i = 0; i < imgs.length; i++) {
-      imgs.item(i).src = imgs.item(i).src.replace('downloads.contentful', 'images.contentful');
+      imgs.item(i).src = imgs
+        .item(i)
+        .src.replace('downloads.contentful', 'images.contentful');
       if (isMobile) {
         imgs.item(i).src += '?w=700';
       } else {
@@ -20,6 +20,5 @@ export class BlogUtils {
     }
 
     return textElement.innerHTML;
-
   }
 }
