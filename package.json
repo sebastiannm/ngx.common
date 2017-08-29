@@ -12,7 +12,8 @@
   },
   "peerDependencies": {
     "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^4.0.0",
+    "contentful": "^4.3.0"
   },
   "author": "Sebas Digital Design AB",
   "license": "ISC",
