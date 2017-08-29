@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/sebastiannm/ngx.common.git"
   },
+  "peerDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0"
+  },
   "author": "Sebas Digital Design AB",
   "license": "ISC",
   "bugs": {
