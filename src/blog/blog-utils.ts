@@ -8,10 +8,13 @@ export class BlogUtils {
       imgs.item(i).src = imgs
         .item(i)
         .src.replace('downloads.contentful', 'images.contentful');
-      if (isMobile) {
-        imgs.item(i).src += '?w=700';
-      } else {
-        imgs.item(i).src += '?w=1500';
+
+      if (!imgs.item(i).src.includes('.gif')) {
+        if (isMobile) {
+          imgs.item(i).src += '?w=700';
+        } else {
+          imgs.item(i).src += '?w=1500';
+        }
       }
     }
     const as = textElement.querySelectorAll('a');
