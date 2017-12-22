@@ -7540,11 +7540,11 @@ var DynamicImageComponent = (function () {
             if (_this.height > 0 && _this.width == 0) {
                 _this.mainSide = 'autoheight';
             }
-            else if (_this.width > 0 && _this.height == 0) {
+            else if (_this.width > 0 && _this.height === 0) {
                 _this.mainSide = 'autowidth';
             }
             else {
-                if (_this.sizemode == 'crop') {
+                if (_this.sizemode === 'crop') {
                     _this.mainSide = _this.assetRatio > 1 ? 'height' : 'width';
                 }
                 else {
@@ -7602,7 +7602,7 @@ var DynamicImageComponent = (function () {
             }
         }
         servingSize = Math.min(servingSize * (Math.ceil(window.devicePixelRatio) || 1), 4000);
-        servingSize = parseInt(servingSize);
+        servingSize = parseInt(servingSize, 10);
         if (servingSize === this.servingSize) {
             this.loaded = true;
             return;

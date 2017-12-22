@@ -5,13 +5,13 @@ import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 
 export class SwiperDirective implements OnInit {
 
-  @Input() swiper = {};
+  @Input() public swiper = {};
 
   constructor(
     private elem: ElementRef
   ) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     setTimeout(() => {
       const slider = new Swiper(this.elem.nativeElement, this.swiper);
     });

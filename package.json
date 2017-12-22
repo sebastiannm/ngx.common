@@ -1,6 +1,6 @@
 {
   "name": "sebasdd-ngx-common",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Build an Angular library compatible with AoT compilation and Tree shaking",
   "main": "./bundles/sebasdd-ngx-common.umd.js",
   "module": "./esm5/sebasdd-ngx-common.js",
@@ -26,7 +26,6 @@
     "@angular/common": "^5.1.2",
     "@angular/core": "^5.1.2",
     "@angular/platform-browser": "^5.1.2",
-    "contentful": "^4.3.0",
     "rxjs": "^5.5.5"
   },
   "devDependencies": {
@@ -43,7 +42,6 @@
     "@types/node": "8.0.47",
     "chalk": "2.3.0",
     "codelyzer": "4.0.0",
-    "contentful": "^5.0.5",
     "core-js": "2.5.1",
     "istanbul-instrumenter-loader": "3.0.0",
     "jasmine-core": "2.8.0",

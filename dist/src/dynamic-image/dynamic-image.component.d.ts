@@ -10,18 +10,18 @@ export declare class DynamicImageComponent implements OnInit, OnDestroy {
     spacerStyle: any;
     assetRatio: number;
     mainSide: string;
+    imgUrl: string;
     private wrapperRatio;
     private width;
     private height;
-    imgUrl: string;
     private servingUrl;
     private servingSize;
     private timeoutFunc;
     constructor(elem: ElementRef);
     ngOnInit(): void;
     ngOnDestroy(): void;
-    getSize(): void;
-    getServingUrl(): void;
-    resize(): void;
-    render(): void;
+    private getSize();
+    private getServingUrl();
+    private resize();
+    private render();
 }

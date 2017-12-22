@@ -188,19 +188,19 @@ import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
 })
 export class DynamicImageComponent implements OnInit, OnDestroy {
 
-  @Input() url: string;
-  @Input() resolution: any;
-  @Input() align: string = 'center center';
-  @Input() sizemode: string = 'fit';
-  @Input() scale: number = 1;
+  @Input() public url: string;
+  @Input() public resolution: any;
+  @Input() public align: string = 'center center';
+  @Input() public sizemode: string = 'fit';
+  @Input() public scale: number = 1;
   public loaded: boolean = false;
   public spacerStyle: any;
   public assetRatio: number;
   public mainSide: string;
+  public imgUrl: string;
   private wrapperRatio: number;
   private width: number;
   private height: number;
-  public imgUrl: string;
   private servingUrl: string;
   private servingSize: any;
   private timeoutFunc: any;
@@ -209,7 +209,7 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
     private elem: ElementRef
   ){ }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.assetRatio = this.resolution.width / this.resolution.height;
     this.spacerStyle = `${this.resolution.height / this.resolution.width * 100}%`;
 
@@ -217,11 +217,11 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
       this.getSize();
 
       if (this.height > 0 && this.width == 0) {
-        this.mainSide = 'autoheight'
-      } else if (this.width > 0 && this.height == 0) {
-        this.mainSide = 'autowidth'
+        this.mainSide = 'autoheight';
+      } else if (this.width > 0 && this.height === 0) {
+        this.mainSide = 'autowidth';
       } else {
-        if (this.sizemode == 'crop') {
+        if (this.sizemode === 'crop') {
           this.mainSide = this.assetRatio > 1 ? 'height' : 'width';
         } else {
           this.mainSide = this.assetRatio < 1 ? 'height' : 'width';
@@ -233,16 +233,16 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     clearTimeout(this.timeoutFunc);
   }
 
-  getSize() {
+  private getSize() {
     this.width  = this.elem.nativeElement.children[0].clientWidth;
     this.height = this.elem.nativeElement.children[0].clientHeight;
   }
 
-  getServingUrl() {
+  private getServingUrl() {
     let servingSize: any;
 
     if (this.mainSide === 'autoheight') {
@@ -261,7 +261,7 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
       }
     }
     servingSize = Math.min(servingSize * (Math.ceil(window.devicePixelRatio) || 1), 4000);
-    servingSize = parseInt(servingSize);
+    servingSize = parseInt(servingSize, 10);
 
     if (servingSize === this.servingSize) {
       this.loaded = true;
@@ -274,7 +274,7 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
     this.render();
   }
 
-  resize() {
+  private resize() {
     if (this.mainSide !== 'autoheight' && this.mainSide !== 'autowidth') {
       this.wrapperRatio = this.width / this.height;
       if (this.sizemode === 'crop') {
@@ -285,8 +285,8 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
     }
   }
 
-  render(): void {
-    let img: any = new Image();
+  private render(): void {
+    const img: any = new Image();
 
     img.onload = () => {
       this.imgUrl = this.servingUrl;

@@ -101,11 +101,11 @@ class DynamicImageComponent {
             if (this.height > 0 && this.width == 0) {
                 this.mainSide = 'autoheight';
             }
-            else if (this.width > 0 && this.height == 0) {
+            else if (this.width > 0 && this.height === 0) {
                 this.mainSide = 'autowidth';
             }
             else {
-                if (this.sizemode == 'crop') {
+                if (this.sizemode === 'crop') {
                     this.mainSide = this.assetRatio > 1 ? 'height' : 'width';
                 }
                 else {
@@ -154,7 +154,7 @@ class DynamicImageComponent {
             }
         }
         servingSize = Math.min(servingSize * (Math.ceil(window.devicePixelRatio) || 1), 4000);
-        servingSize = parseInt(servingSize);
+        servingSize = parseInt(servingSize, 10);
         if (servingSize === this.servingSize) {
             this.loaded = true;
             return;
@@ -181,7 +181,7 @@ class DynamicImageComponent {
      * @return {?}
      */
     render() {
-        let /** @type {?} */ img = new Image();
+        const /** @type {?} */ img = new Image();
         img.onload = () => {
             this.imgUrl = this.servingUrl;
             this.loaded = true;
