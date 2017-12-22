@@ -5,29 +5,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var contentful_1 = require("contentful");
-var ContentFulService = /** @class */ (function () {
-    function ContentFulService() {
-    }
-    ContentFulService.prototype.setupClient = function (space, accessToken) {
+const core_1 = require("@angular/core");
+const contentful_1 = require("contentful");
+let ContentFulService = class ContentFulService {
+    constructor() { }
+    setupClient(space, accessToken) {
         this.client = contentful_1.createClient({
-            space: space,
-            accessToken: accessToken
+            space,
+            accessToken
         });
-    };
-    ContentFulService.prototype.search = function (query) {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.client.getEntries(query).then(function (response) {
+    }
+    search(query) {
+        return new Promise(resolve => {
+            this.client.getEntries(query).then(response => {
                 resolve(response);
             });
         });
-    };
-    ContentFulService = __decorate([
-        core_1.Injectable()
-    ], ContentFulService);
-    return ContentFulService;
-}());
+    }
+};
+ContentFulService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [])
+], ContentFulService);
 exports.ContentFulService = ContentFulService;
