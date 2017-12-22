@@ -2,7 +2,12 @@ import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'dynamic-image',
-  templateUrl: 'dynamic-image.html',
+  template: `
+  <div [class.loaded]="loaded" class="dynamic-image-content {{align}} {{sizemode}} {{mainSide}}">
+    <div [style.paddingBottom]="spacerStyle" class="spacer"></div>
+    <img [src]="imgUrl" *ngIf="imgUrl" class="large"/>
+  </div>
+  `,
   styleUrls: ['dynamic-image.sass']
 })
 export class DynamicImageComponent implements OnInit, OnDestroy {
