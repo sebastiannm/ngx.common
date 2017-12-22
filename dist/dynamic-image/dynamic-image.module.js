@@ -17,7 +17,9 @@ var DynamicImageModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule
             ],
-            exports: [],
+            exports: [
+                dynamic_image_component_1.DynamicImageComponent
+            ],
             declarations: [
                 dynamic_image_component_1.DynamicImageComponent
             ],

@@ -8,7 +8,7 @@ import { DynamicImageComponent } from './dynamic-image.component';
     CommonModule
   ],
   exports: [
-
+    DynamicImageComponent
   ],
   declarations: [
     DynamicImageComponent
