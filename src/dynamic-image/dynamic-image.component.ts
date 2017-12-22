@@ -8,7 +8,7 @@ import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
     <img [src]="imgUrl" *ngIf="imgUrl" class="large"/>
   </div>
   `,
-  styleUrls: [`
+  styles: [`
     \:host {
       display: block;
     }
