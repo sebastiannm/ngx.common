@@ -1,6 +1,6 @@
 {
   "name": "sebasdd-ngx-common",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,8 +12,9 @@
     "url": "git+https://github.com/sebastiannm/ngx.common.git"
   },
   "peerDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0",
+    "@angular/common": "^5.1.0",
+    "@angular/core": "^5.1.0",
+    "@angular/platform-browser": "^5.1.0",
     "contentful": "^4.3.0"
   },
   "author": "Sebas Digital Design AB",

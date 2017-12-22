@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import 'rxjs/add/operator/publishReplay';
 import 'rxjs/add/operator/share';
@@ -9,7 +9,7 @@ import 'rxjs/observable/of';
 @Injectable()
 export class GeoIpService {
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   get() {
     const url: string = 'https://api.sebastianmoreno.se/api/geoip';
