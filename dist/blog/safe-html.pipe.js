@@ -29,3 +29,4 @@ var SafeHtmlPipe = /** @class */ (function () {
     return SafeHtmlPipe;
 }());
 exports.SafeHtmlPipe = SafeHtmlPipe;
+//# sourceMappingURL=safe-html.pipe.js.map

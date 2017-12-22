@@ -28,3 +28,4 @@ var GeoIpService = /** @class */ (function () {
     return GeoIpService;
 }());
 exports.GeoIpService = GeoIpService;
+//# sourceMappingURL=geoip.service.js.map

@@ -32,3 +32,4 @@ var SwiperDirective = /** @class */ (function () {
     return SwiperDirective;
 }());
 exports.SwiperDirective = SwiperDirective;
+//# sourceMappingURL=swiper.directive.js.map

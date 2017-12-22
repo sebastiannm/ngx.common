@@ -35,3 +35,4 @@ var ContentFulService = /** @class */ (function () {
     return ContentFulService;
 }());
 exports.ContentFulService = ContentFulService;
+//# sourceMappingURL=contentful.service.js.map
