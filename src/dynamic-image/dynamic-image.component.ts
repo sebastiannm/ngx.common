@@ -2,8 +2,8 @@ import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'dynamic-image',
-  templateUrl: './dynamic-image.html',
-  styleUrls: ['./dynamic-image.sass']
+  templateUrl: 'dynamic-image.html',
+  styleUrls: ['dynamic-image.sass']
 })
 export class DynamicImageComponent implements OnInit, OnDestroy {
 

@@ -122,8 +122,8 @@ __decorate([
 DynamicImageComponent = __decorate([
     core_1.Component({
         selector: 'dynamic-image',
-        templateUrl: './dynamic-image.html',
-        styleUrls: ['./dynamic-image.sass']
+        templateUrl: 'dynamic-image.html',
+        styleUrls: ['dynamic-image.sass']
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object])
 ], DynamicImageComponent);
