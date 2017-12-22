@@ -203,7 +203,7 @@ export class DynamicImageComponent implements OnInit, OnDestroy {
   public imgUrl: string;
   private servingUrl: string;
   private servingSize: any;
-  private timeoutFunc;
+  private timeoutFunc: any;
 
   constructor(
     private elem: ElementRef
