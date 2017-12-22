@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import 'rxjs/add/operator/publishReplay';
-import 'rxjs/add/operator/share';
-import 'rxjs/observable/of';
+import { publishReplay, refCount } from 'rxjs/operators'
 
 
 @Injectable()
@@ -14,8 +12,9 @@ export class GeoIpService {
   get() {
     const url: string = 'https://api.sebastianmoreno.se/api/geoip';
     return this.http.get(url)
-      .map(res => res.json())
-      .publishReplay(1)
-      .refCount();
+      .pipe(
+        publishReplay(1),
+        refCount()
+      )
   }
 }

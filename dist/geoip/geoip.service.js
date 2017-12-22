@@ -7,9 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-require("rxjs/add/operator/publishReplay");
-require("rxjs/add/operator/share");
-require("rxjs/observable/of");
+var operators_1 = require("rxjs/operators");
 var GeoIpService = /** @class */ (function () {
     function GeoIpService(http) {
         this.http = http;
@@ -17,9 +15,7 @@ var GeoIpService = /** @class */ (function () {
     GeoIpService.prototype.get = function () {
         var url = 'https://api.sebastianmoreno.se/api/geoip';
         return this.http.get(url)
-            .map(function (res) { return res.json(); })
-            .publishReplay(1)
-            .refCount();
+            .pipe(operators_1.publishReplay(1), operators_1.refCount());
     };
     GeoIpService = __decorate([
         core_1.Injectable()

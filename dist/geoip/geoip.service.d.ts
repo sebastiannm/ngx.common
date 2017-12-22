@@ -1,9 +1,6 @@
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/publishReplay';
-import 'rxjs/add/operator/share';
-import 'rxjs/observable/of';
+import { HttpClient } from '@angular/common/http';
 export declare class GeoIpService {
     private http;
-    constructor(http: Http);
+    constructor(http: HttpClient);
     get(): any;
 }
