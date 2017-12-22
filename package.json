@@ -1,13 +1,12 @@
 {
   "name": "sebasdd-ngx-common",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "",
-  "typings": "./sebasdd-ngx-common.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebastiannm/ngx.common.git"
   },
-  "main": "index.ts",
+  "main": "dist/index.js",
   "peerDependencies": {
     "@angular/common": "^5.1.2",
     "@angular/core": "^5.1.2",
