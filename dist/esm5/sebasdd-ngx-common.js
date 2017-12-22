@@ -27,8 +27,9 @@ var BlogUtils = (function () {
      * @return {?}
      */
     function (htmlString, isMobile) {
-        if (!htmlString)
+        if (!htmlString) {
             return (htmlString = '');
+        }
         var /** @type {?} */ textElement = document.createElement('div');
         textElement.innerHTML = htmlString;
         var /** @type {?} */ imgs = textElement.querySelectorAll('img');

@@ -1,6 +1,6 @@
 export class BlogUtils {
-  static massageText(htmlString: any, isMobile: boolean): string {
-    if (!htmlString) return (htmlString = '');
+  public static massageText(htmlString: any, isMobile: boolean): string {
+    if (!htmlString) { return (htmlString = ''); }
     const textElement = document.createElement('div');
     textElement.innerHTML = htmlString;
     const imgs = textElement.querySelectorAll('img');

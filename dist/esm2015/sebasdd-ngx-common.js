@@ -20,8 +20,9 @@ class BlogUtils {
      * @return {?}
      */
     static massageText(htmlString, isMobile) {
-        if (!htmlString)
+        if (!htmlString) {
             return (htmlString = '');
+        }
         const /** @type {?} */ textElement = document.createElement('div');
         textElement.innerHTML = htmlString;
         const /** @type {?} */ imgs = textElement.querySelectorAll('img');
