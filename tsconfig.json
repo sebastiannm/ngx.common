@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": ".",
     "module": "commonjs",
     "target": "es5",
     "declaration": true,
@@ -13,6 +12,6 @@
     "lib": ["es6", "dom"]
   },
   "include": [
-    "src/**/*.ts"
+    "./src/**/*.ts"
   ]
 }

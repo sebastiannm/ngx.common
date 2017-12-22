@@ -9,22 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const http_1 = require("@angular/common/http");
-const operators_1 = require("rxjs/operators");
-let GeoIpService = class GeoIpService {
-    constructor(http) {
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/common/http");
+var operators_1 = require("rxjs/operators");
+var GeoIpService = /** @class */ (function () {
+    function GeoIpService(http) {
         this.http = http;
     }
-    get() {
-        const url = 'https://api.sebastianmoreno.se/api/geoip';
+    GeoIpService.prototype.get = function () {
+        var url = 'https://api.sebastianmoreno.se/api/geoip';
         return this.http.get(url)
             .pipe(operators_1.publishReplay(1), operators_1.refCount());
-    }
-};
-GeoIpService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [typeof (_a = typeof http_1.HttpClient !== "undefined" && http_1.HttpClient) === "function" && _a || Object])
-], GeoIpService);
+    };
+    GeoIpService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], GeoIpService);
+    return GeoIpService;
+}());
 exports.GeoIpService = GeoIpService;
-var _a;

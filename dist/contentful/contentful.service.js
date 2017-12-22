@@ -9,26 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const contentful_1 = require("contentful");
-let ContentFulService = class ContentFulService {
-    constructor() { }
-    setupClient(space, accessToken) {
-        this.client = contentful_1.createClient({
-            space,
-            accessToken
-        });
+var core_1 = require("@angular/core");
+var contentful_1 = require("contentful");
+var ContentFulService = /** @class */ (function () {
+    function ContentFulService() {
     }
-    search(query) {
-        return new Promise(resolve => {
-            this.client.getEntries(query).then(response => {
+    ContentFulService.prototype.setupClient = function (space, accessToken) {
+        this.client = contentful_1.createClient({
+            space: space,
+            accessToken: accessToken
+        });
+    };
+    ContentFulService.prototype.search = function (query) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.client.getEntries(query).then(function (response) {
                 resolve(response);
             });
         });
-    }
-};
-ContentFulService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [])
-], ContentFulService);
+    };
+    ContentFulService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [])
+    ], ContentFulService);
+    return ContentFulService;
+}());
 exports.ContentFulService = ContentFulService;

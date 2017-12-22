@@ -1,13 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class BlogUtils {
-    static massageText(htmlString, isMobile) {
+var BlogUtils = /** @class */ (function () {
+    function BlogUtils() {
+    }
+    BlogUtils.massageText = function (htmlString, isMobile) {
         if (!htmlString)
             return (htmlString = '');
-        const textElement = document.createElement('div');
+        var textElement = document.createElement('div');
         textElement.innerHTML = htmlString;
-        const imgs = textElement.querySelectorAll('img');
-        for (let i = 0; i < imgs.length; i++) {
+        var imgs = textElement.querySelectorAll('img');
+        for (var i = 0; i < imgs.length; i++) {
             imgs.item(i).src = imgs
                 .item(i)
                 .src.replace('downloads.contentful', 'images.contentful');
@@ -20,11 +22,12 @@ class BlogUtils {
                 }
             }
         }
-        const as = textElement.querySelectorAll('a');
-        for (let i = 0; i < as.length; i++) {
+        var as = textElement.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
             as.item(i).setAttribute('target', '_blank');
         }
         return textElement.innerHTML;
-    }
-}
+    };
+    return BlogUtils;
+}());
 exports.BlogUtils = BlogUtils;

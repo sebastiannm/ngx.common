@@ -9,23 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const platform_browser_1 = require("@angular/platform-browser");
-let SafeHtmlPipe = class SafeHtmlPipe {
-    constructor(sanitizer) {
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var SafeHtmlPipe = /** @class */ (function () {
+    function SafeHtmlPipe(sanitizer) {
         this.sanitizer = sanitizer;
     }
-    transform(value, args) {
+    SafeHtmlPipe.prototype.transform = function (value, args) {
         if (!value)
             return;
         return this.sanitizer.bypassSecurityTrustHtml(value);
-    }
-};
-SafeHtmlPipe = __decorate([
-    core_1.Pipe({
-        name: 'safeHtml'
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof platform_browser_1.DomSanitizer !== "undefined" && platform_browser_1.DomSanitizer) === "function" && _a || Object])
-], SafeHtmlPipe);
+    };
+    SafeHtmlPipe = __decorate([
+        core_1.Pipe({
+            name: 'safeHtml'
+        }),
+        __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
+    ], SafeHtmlPipe);
+    return SafeHtmlPipe;
+}());
 exports.SafeHtmlPipe = SafeHtmlPipe;
-var _a;
