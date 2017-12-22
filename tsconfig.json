@@ -4,7 +4,6 @@
     "noEmitOnError": true,
     "outDir": "./dist",
     "skipLibCheck": true,
-    "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
