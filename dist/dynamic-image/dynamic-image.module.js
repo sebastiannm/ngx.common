@@ -7,15 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var dynamic_image_component_1 = require("./dynamic-image.component");
 var DynamicImageModule = /** @class */ (function () {
     function DynamicImageModule() {
     }
     DynamicImageModule = __decorate([
         core_1.NgModule({
-            imports: [],
+            imports: [
+                common_1.CommonModule
+            ],
             exports: [],
-            declarations: [dynamic_image_component_1.DynamicImageComponent],
+            declarations: [
+                dynamic_image_component_1.DynamicImageComponent
+            ],
             providers: [],
         })
     ], DynamicImageModule);
