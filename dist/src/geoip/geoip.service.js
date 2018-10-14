@@ -20,10 +20,9 @@ var GeoIpService = /** @class */ (function () {
         var url = 'https://ecommerce.sebastianmoreno.se/api/geoip';
         return this.http.get(url).pipe(operators_1.publishReplay(1), operators_1.refCount());
     };
-    var _a;
     GeoIpService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [typeof (_a = typeof http_1.HttpClient !== "undefined" && http_1.HttpClient) === "function" && _a || Object])
+        __metadata("design:paramtypes", [http_1.HttpClient])
     ], GeoIpService);
     return GeoIpService;
 }());

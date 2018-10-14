@@ -21,12 +21,11 @@ var SafeHtmlPipe = /** @class */ (function () {
         }
         return this.sanitizer.bypassSecurityTrustHtml(value);
     };
-    var _a;
     SafeHtmlPipe = __decorate([
         core_1.Pipe({
             name: 'safeHtml'
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof platform_browser_1.DomSanitizer !== "undefined" && platform_browser_1.DomSanitizer) === "function" && _a || Object])
+        __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
     ], SafeHtmlPipe);
     return SafeHtmlPipe;
 }());

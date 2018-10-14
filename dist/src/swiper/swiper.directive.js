@@ -21,14 +21,13 @@ var SwiperDirective = /** @class */ (function () {
             var slider = new Swiper(_this.elem.nativeElement, _this.swiper);
         });
     };
-    var _a;
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
     ], SwiperDirective.prototype, "swiper", void 0);
     SwiperDirective = __decorate([
         core_1.Directive({ selector: '[swiper]' }),
-        __metadata("design:paramtypes", [typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object])
+        __metadata("design:paramtypes", [core_1.ElementRef])
     ], SwiperDirective);
     return SwiperDirective;
 }());
