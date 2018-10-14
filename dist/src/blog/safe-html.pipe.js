@@ -21,6 +21,7 @@ var SafeHtmlPipe = /** @class */ (function () {
         }
         return this.sanitizer.bypassSecurityTrustHtml(value);
     };
+    var _a;
     SafeHtmlPipe = __decorate([
         core_1.Pipe({
             name: 'safeHtml'
@@ -28,7 +29,6 @@ var SafeHtmlPipe = /** @class */ (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof platform_browser_1.DomSanitizer !== "undefined" && platform_browser_1.DomSanitizer) === "function" && _a || Object])
     ], SafeHtmlPipe);
     return SafeHtmlPipe;
-    var _a;
 }());
 exports.SafeHtmlPipe = SafeHtmlPipe;
 //# sourceMappingURL=safe-html.pipe.js.map

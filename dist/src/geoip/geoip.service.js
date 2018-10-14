@@ -17,16 +17,15 @@ var GeoIpService = /** @class */ (function () {
         this.http = http;
     }
     GeoIpService.prototype.get = function () {
-        var url = 'https://api.sebastianmoreno.se/api/geoip';
-        return this.http.get(url)
-            .pipe(operators_1.publishReplay(1), operators_1.refCount());
+        var url = 'https://ecommerce.sebastianmoreno.se/api/geoip';
+        return this.http.get(url).pipe(operators_1.publishReplay(1), operators_1.refCount());
     };
+    var _a;
     GeoIpService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [typeof (_a = typeof http_1.HttpClient !== "undefined" && http_1.HttpClient) === "function" && _a || Object])
     ], GeoIpService);
     return GeoIpService;
-    var _a;
 }());
 exports.GeoIpService = GeoIpService;
 //# sourceMappingURL=geoip.service.js.map

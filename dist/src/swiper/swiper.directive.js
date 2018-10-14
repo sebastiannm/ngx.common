@@ -21,6 +21,7 @@ var SwiperDirective = /** @class */ (function () {
             var slider = new Swiper(_this.elem.nativeElement, _this.swiper);
         });
     };
+    var _a;
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
@@ -30,7 +31,6 @@ var SwiperDirective = /** @class */ (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object])
     ], SwiperDirective);
     return SwiperDirective;
-    var _a;
 }());
 exports.SwiperDirective = SwiperDirective;
 //# sourceMappingURL=swiper.directive.js.map

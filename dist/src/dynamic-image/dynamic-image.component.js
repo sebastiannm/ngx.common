@@ -100,6 +100,7 @@ var DynamicImageComponent = /** @class */ (function () {
         };
         img.src = this.servingUrl;
     };
+    var _a;
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -129,7 +130,6 @@ var DynamicImageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object])
     ], DynamicImageComponent);
     return DynamicImageComponent;
-    var _a;
 }());
 exports.DynamicImageComponent = DynamicImageComponent;
 //# sourceMappingURL=dynamic-image.component.js.map
