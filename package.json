@@ -1,6 +1,6 @@
 {
   "name": "sebasdd-ngx-common",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "",
   "repository": {
     "type": "git",
@@ -22,12 +22,5 @@
   "bugs": {
     "url": "https://github.com/sebastiannm/ngx.common/issues"
   },
-  "homepage": "https://github.com/sebastiannm/ngx.common#readme",
-  "dependencies": {
-    "@angular/common": "^6.1.10",
-    "@angular/core": "^6.1.10",
-    "@angular/platform-browser": "^6.1.10",
-    "contentful": "^7.0.4",
-    "rxjs": "^6.3.3"
-  }
+  "homepage": "https://github.com/sebastiannm/ngx.common#readme"
 }
