@@ -4,7 +4,7 @@ import { GeoIpService } from './geoip.service'
 @NgModule({
   imports: [],
   exports: [GeoIpService],
-  declarations: [],
+  declarations: [GeoIpService],
   providers: [GeoIpService]
 })
 export class GeoIpModule {}

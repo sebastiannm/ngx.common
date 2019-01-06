@@ -10,7 +10,7 @@ var GeoIpModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [],
             exports: [geoip_service_1.GeoIpService],
-            declarations: [],
+            declarations: [geoip_service_1.GeoIpService],
             providers: [geoip_service_1.GeoIpService]
         })
     ], GeoIpModule);
