@@ -1,11 +1,6 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+var tslib_1 = require("tslib");
 var core_1 = require("@angular/core");
 var DynamicImageComponent = /** @class */ (function () {
     function DynamicImageComponent(elem) {
@@ -98,30 +93,37 @@ var DynamicImageComponent = /** @class */ (function () {
         };
         img.src = this.servingUrl;
     };
-    __decorate([
-        core_1.Input()
-    ], DynamicImageComponent.prototype, "url", void 0);
-    __decorate([
-        core_1.Input()
-    ], DynamicImageComponent.prototype, "resolution", void 0);
-    __decorate([
-        core_1.Input()
-    ], DynamicImageComponent.prototype, "align", void 0);
-    __decorate([
-        core_1.Input()
-    ], DynamicImageComponent.prototype, "sizemode", void 0);
-    __decorate([
-        core_1.Input()
-    ], DynamicImageComponent.prototype, "scale", void 0);
-    DynamicImageComponent = __decorate([
+    tslib_1.__decorate([
+        core_1.Input(),
+        tslib_1.__metadata("design:type", String)
+    ], DynamicImageComponent.prototype, "url");
+    tslib_1.__decorate([
+        core_1.Input(),
+        tslib_1.__metadata("design:type", Object)
+    ], DynamicImageComponent.prototype, "resolution");
+    tslib_1.__decorate([
+        core_1.Input(),
+        tslib_1.__metadata("design:type", String)
+    ], DynamicImageComponent.prototype, "align");
+    tslib_1.__decorate([
+        core_1.Input(),
+        tslib_1.__metadata("design:type", String)
+    ], DynamicImageComponent.prototype, "sizemode");
+    tslib_1.__decorate([
+        core_1.Input(),
+        tslib_1.__metadata("design:type", Number)
+    ], DynamicImageComponent.prototype, "scale");
+    DynamicImageComponent = tslib_1.__decorate([
         core_1.Component({
             selector: 'dynamic-image',
             template: "\n  <div [class.loaded]=\"loaded\" class=\"dynamic-image-content {{align}} {{sizemode}} {{mainSide}}\">\n    <div [style.paddingBottom]=\"spacerStyle\" class=\"spacer\"></div>\n    <img [src]=\"imgUrl\" *ngIf=\"imgUrl\" class=\"large\"/>\n  </div>\n  ",
             styles: [
                 "\n      :host {\n        display: block;\n      }\n\n      .dynamic-image-content {\n        position: relative;\n        overflow: hidden;\n        box-sizing: border-box;\n      }\n\n      .dynamic-image-content.absolute {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      }\n\n      .dynamic-image-content pre {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        background: white;\n        padding: 0;\n        font-size: 0.75em;\n        line-height: 1.6em;\n      }\n\n      .dynamic-image-content img {\n        position: absolute;\n        padding: 0;\n        margin: 0;\n        line-height: 0;\n      }\n\n      .dynamic-image-content img.small {\n        opacity: 1;\n      }\n\n      .dynamic-image-content img.large {\n        opacity: 0;\n        transition: opacity 0.75s;\n      }\n\n      .dynamic-image-content.noplaceholder img.small {\n        visibility: hidden;\n      }\n\n      .dynamic-image-content.fit.height img {\n        height: 100%;\n      }\n\n      .dynamic-image-content.fit.width img {\n        width: 100%;\n      }\n\n      .dynamic-image-content.fit.autoheight {\n        line-height: 0;\n      }\n\n      .dynamic-image-content.fit.autoheight .spacer {\n        display: none;\n      }\n\n      .dynamic-image-content.fit.autoheight img {\n        position: relative;\n        left: initial;\n        right: initial;\n        bottom: initial;\n        top: initial;\n        transform: none;\n        height: 100%;\n        width: auto;\n      }\n\n      .dynamic-image-content.fit.autowidth img {\n        position: absolute;\n        width: 100%;\n      }\n\n      .dynamic-image-content.crop.height img {\n        height: 100%;\n        max-width: initial;\n      }\n\n      .dynamic-image-content.crop.width img {\n        width: 100%;\n        max-height: initial;\n      }\n\n      .dynamic-image-content.loaded img {\n        border: 0;\n      }\n\n      .dynamic-image-content.loaded img.large {\n        opacity: 1;\n      }\n\n      .dynamic-image-content.loaded img.small {\n        opacity: 0;\n        position: absolute;\n      }\n\n      .dynamic-image-content.center img {\n        left: 50%;\n        right: initial;\n        top: 50%;\n        bottom: initial;\n        transform: translateX(-50%) translateY(-50%);\n      }\n\n      .dynamic-image-content.left.center img {\n        top: 50%;\n        right: initial;\n        left: 0;\n        bottom: initial;\n        transform: translateX(0%) translateY(-50%);\n      }\n\n      .dynamic-image-content.right.center img {\n        top: 50%;\n        right: 0;\n        left: initial;\n        bottom: initial;\n        transform: translateX(0%) translateY(-50%);\n      }\n\n      .dynamic-image-content.left.top img {\n        top: 0;\n        right: initial;\n        bottom: initial;\n        left: 0;\n        transform: translateX(0%) translateY(0%);\n      }\n\n      .dynamic-image-content.center.top img {\n        top: 0;\n        right: initial;\n        bottom: initial;\n        left: 50%;\n        transform: translateX(-50%) translateY(0%);\n      }\n\n      .dynamic-image-content.right.top img {\n        top: 0;\n        right: 0;\n        bottom: initial;\n        left: initial;\n        transform: translateX(0%) translateY(0%);\n      }\n\n      .dynamic-image-content.left.bottom img {\n        top: initial;\n        right: initial;\n        bottom: 0;\n        left: 0;\n        transform: translateX(0%) translateY(0%);\n      }\n\n      .dynamic-image-content.center.bottom img {\n        top: initial;\n        right: initial;\n        bottom: 0;\n        left: 50%;\n        transform: translateX(-50%) translateY(0%);\n      }\n\n      .dynamic-image-content.right.bottom img {\n        top: initial;\n        right: 0;\n        bottom: 0;\n        left: initial;\n        transform: translateX(0%) translateY(0%);\n      }\n    "
             ]
-        })
+        }),
+        tslib_1.__metadata("design:paramtypes", [core_1.ElementRef])
     ], DynamicImageComponent);
     return DynamicImageComponent;
 }());
 exports.DynamicImageComponent = DynamicImageComponent;
+//# sourceMappingURL=dynamic-image.component.js.map

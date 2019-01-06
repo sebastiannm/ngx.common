@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var BlogUtils = /** @class */ (function () {
     function BlogUtils() {
     }
@@ -32,3 +32,4 @@ var BlogUtils = /** @class */ (function () {
     return BlogUtils;
 }());
 exports.BlogUtils = BlogUtils;
+//# sourceMappingURL=blog-utils.js.map

@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var blog_utils_1 = require("./blog/blog-utils");
 exports.BlogUtils = blog_utils_1.BlogUtils;
 var geoip_module_1 = require("./geoip/geoip.module");
@@ -14,3 +14,4 @@ var swiper_directive_1 = require("./swiper/swiper.directive");
 exports.SwiperDirective = swiper_directive_1.SwiperDirective;
 var contentful_service_1 = require("./contentful/contentful.service");
 exports.ContentFulService = contentful_service_1.ContentFulService;
+//# sourceMappingURL=index.js.map
