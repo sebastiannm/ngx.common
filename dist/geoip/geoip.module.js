@@ -7,7 +7,7 @@ GeoIpModule = tslib_1.__decorate([
     NgModule({
         imports: [],
         exports: [GeoIpService],
-        declarations: [GeoIpService],
+        declarations: [],
         providers: [GeoIpService]
     })
 ], GeoIpModule);
