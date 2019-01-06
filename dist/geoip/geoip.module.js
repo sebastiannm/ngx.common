@@ -15,7 +15,7 @@ var GeoIpModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [],
             exports: [geoip_service_1.GeoIpService],
-            declarations: [geoip_service_1.GeoIpService],
+            declarations: [],
             providers: [geoip_service_1.GeoIpService]
         })
     ], GeoIpModule);
