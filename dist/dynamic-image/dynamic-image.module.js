@@ -1,27 +1,22 @@
-"use strict";
-exports.__esModule = true;
-var tslib_1 = require("tslib");
-var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var dynamic_image_component_1 = require("./dynamic-image.component");
-var DynamicImageModule = /** @class */ (function () {
-    function DynamicImageModule() {
-    }
-    DynamicImageModule = tslib_1.__decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule
-            ],
-            exports: [
-                dynamic_image_component_1.DynamicImageComponent
-            ],
-            declarations: [
-                dynamic_image_component_1.DynamicImageComponent
-            ],
-            providers: []
-        })
-    ], DynamicImageModule);
-    return DynamicImageModule;
-}());
-exports.DynamicImageModule = DynamicImageModule;
+import * as tslib_1 from "tslib";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DynamicImageComponent } from './dynamic-image.component';
+let DynamicImageModule = class DynamicImageModule {
+};
+DynamicImageModule = tslib_1.__decorate([
+    NgModule({
+        imports: [
+            CommonModule
+        ],
+        exports: [
+            DynamicImageComponent
+        ],
+        declarations: [
+            DynamicImageComponent
+        ],
+        providers: [],
+    })
+], DynamicImageModule);
+export { DynamicImageModule };
 //# sourceMappingURL=dynamic-image.module.js.map
