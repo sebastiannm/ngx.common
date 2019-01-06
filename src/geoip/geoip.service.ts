@@ -8,8 +8,8 @@ import { Observable } from 'rxjs'
 export class GeoIpService {
   constructor(private http: HttpClient) {}
 
-  public get(): Observable<any> {
-    const url: string = 'https://ecommerce.sebastianmoreno.se/api/geoip'
+  get(): Observable<any> {
+    const url = 'https://ecommerce.sebastianmoreno.se/api/geoip'
     return this.http.get(url).pipe(
       publishReplay(1),
       refCount()
