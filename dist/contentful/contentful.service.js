@@ -1,25 +1,28 @@
 import * as tslib_1 from "tslib";
 import { Injectable } from '@angular/core';
 import { createClient } from 'contentful';
-let ContentFulService = class ContentFulService {
-    constructor() { }
-    setupClient(space, accessToken) {
-        this.client = createClient({
-            space,
-            accessToken
-        });
+var ContentFulService = /** @class */ (function () {
+    function ContentFulService() {
     }
-    search(query) {
-        return new Promise(resolve => {
-            this.client.getEntries(query).then((response) => {
+    ContentFulService.prototype.setupClient = function (space, accessToken) {
+        this.client = createClient({
+            space: space,
+            accessToken: accessToken
+        });
+    };
+    ContentFulService.prototype.search = function (query) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.client.getEntries(query).then(function (response) {
                 resolve(response);
             });
         });
-    }
-};
-ContentFulService = tslib_1.__decorate([
-    Injectable(),
-    tslib_1.__metadata("design:paramtypes", [])
-], ContentFulService);
+    };
+    ContentFulService = tslib_1.__decorate([
+        Injectable(),
+        tslib_1.__metadata("design:paramtypes", [])
+    ], ContentFulService);
+    return ContentFulService;
+}());
 export { ContentFulService };
 //# sourceMappingURL=contentful.service.js.map
